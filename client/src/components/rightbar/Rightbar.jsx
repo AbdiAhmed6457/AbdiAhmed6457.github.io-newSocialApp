@@ -4,17 +4,19 @@ import Online from "./Online/Online"
 // import Profile from "../../pages/profile/Profile"
 
 export default function Rightbar({profile}) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
   const HomeRightbar = () => {
   return (
           <> 
           <div className="birthdayContainer">
-            <img src="assets/post/gift.png" className="birthdayImg" alt="" />
+            <img src={`${PF}post/gift.png`} className="birthdayImg" alt="" />
             <span className="birthdayText">
             <b>Faysel siefu </b> and <b>other friends</b> have a birthday today
             </span>
         </div>
 
-        <img src="assets/post/ad.png" className="rightbarAd" alt="" />
+        <img src={`${PF}post/ad.png" `}lassName="rightbarAd" alt="" />
         <h4 className="rightbarTitle">Online Friends</h4>
       <ul className="rightbarFriendList">
             { Users.map((u) => (
@@ -48,27 +50,27 @@ export default function Rightbar({profile}) {
          <h4 className="rightbarTitle"> User friends</h4>
          <div className="rightbarFollowings">
           <div className="rightFollowing">
-            <img src="assets/person/1.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/1.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
           <div className="rightFollowing">
-            <img src="assets/person/2.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/2.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
           <div className="rightFollowing">
-            <img src="assets/person/3.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/3.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
           <div className="rightFollowing">
-            <img src="assets/person/4.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/4.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
           <div className="rightFollowing">
-            <img src="assets/person/5.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/5.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
           <div className="rightFollowing">
-            <img src="assets/person/6.jpeg" alt="" className="rightbarFollowingImg" />
+            <img src={`${PF}person/6.jpeg`} alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">Ilha Imran</span>
           </div>
          </div>

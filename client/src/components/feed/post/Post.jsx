@@ -7,6 +7,7 @@ export default function Post( {post}) {
     // console.log(post)
     const [likeCount, setLikeCount] = new useState(post.like)
     const [clicked, setClicked] = new useState(false);
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER ;
 
     function increaseClick () {
         setLikeCount(likeCount + 1)
@@ -36,7 +37,7 @@ export default function Post( {post}) {
                 <span className="postText">
                     {post?.desc}
                 </span>
-                <img src= {post.photo} alt="" className='postImg' />
+                <img src= {PF+post.photo} alt="" className='postImg' />
                 
             </div>
             <div className="postBottom">

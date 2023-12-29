@@ -2,10 +2,12 @@ import "./Online.css"
 
 export default function Online({user}) {
     console.log(user)
-  return (
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER ;
+  
+    return (
     <li className="rightBarFriend">
         <div className="rightbarProfileImgContainer">
-            <img src= {user.profilePicture} className="rightbarProfileImg" alt="" />
+            <img src= {PF+user.profilePicture} className="rightbarProfileImg" alt="" />
             <span className="rightbarOnline"></span>
         </div>
         <span className="rightbarUsername">{user.username}</span>
