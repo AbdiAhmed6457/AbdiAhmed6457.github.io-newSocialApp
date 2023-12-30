@@ -1,6 +1,9 @@
+import Topbar from '../../components/topbar/Topbar'
 import './Login.css'
 export default function Login() {
   return (
+  <>
+  <Topbar/>
    <div className="login">
        <div className='loginWrapper'>
             <div className="loginLeft">
@@ -18,6 +21,7 @@ export default function Login() {
        </div>
     </div>
    </div> 
+   </>
     
   )
 }

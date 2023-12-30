@@ -3,9 +3,8 @@ import { Users } from "../../dummyData"
 import Online from "./Online/Online"
 // import Profile from "../../pages/profile/Profile"
 
-export default function Rightbar({profile}) {
+export default function Rightbar({user}) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-
   const HomeRightbar = () => {
   return (
           <> 
@@ -16,7 +15,7 @@ export default function Rightbar({profile}) {
             </span>
         </div>
 
-        <img src={`${PF}post/ad.png" `}lassName="rightbarAd" alt="" />
+        <img src={`${PF}post/ad.png`} className = "rightbarAd" alt="" />
         <h4 className="rightbarTitle">Online Friends</h4>
       <ul className="rightbarFriendList">
             { Users.map((u) => (
@@ -35,15 +34,16 @@ export default function Rightbar({profile}) {
          <div className="rightbarInfo">
           <div className="rightbarInfoItem">
             <span className="rightbarInfokey">city: </span>
-            <span className="righbarInfoKeyValue">Addis Abeba</span>
+            <span className="righbarInfoKeyValue">{user.city}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfokey">From: </span>
-            <span className="righbarInfoKeyValue">Ethiopia</span>
+            <span className="righbarInfoKeyValue">{user.from}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfokey">Relationship: </span>
-            <span className="righbarInfoValue">Single</span>
+            <span className="righbarInfoValue">{user.relationship ===1 ? "Single" :
+             user.relationship === 2 ? "Married" : "not spacified" }</span>
           </div>
          </div>
 
@@ -81,7 +81,7 @@ export default function Rightbar({profile}) {
     <div className="rightbar">
        <div className="rightbarWrapper">
          
-         {profile ?  <ProfileRightbar/> : <HomeRightbar/>}
+         {user ?  <ProfileRightbar/> : <HomeRightbar/>}
        </div>
     </div>
   )

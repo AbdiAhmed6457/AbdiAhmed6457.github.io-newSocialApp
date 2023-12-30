@@ -47,8 +47,12 @@ const UserSchema = new mongoose.Schema({
         type:String,
         max:50
     },
-    relationship: {
+    from: {
         type: String,
+        max:50
+    },
+    relationship: {
+        type: Number,
         enum: [1,2,3,4]
     }
 

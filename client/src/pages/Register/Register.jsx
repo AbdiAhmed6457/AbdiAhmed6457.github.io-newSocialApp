@@ -1,7 +1,10 @@
+import Topbar from '../../components/topbar/Topbar'
 import './Register.css'
 
 export default function Register() {
   return (
+ <>
+ <Topbar/>
    <div className="login">
        <div className='loginWrapper'>
             <div className="loginLeft">
@@ -20,6 +23,7 @@ export default function Register() {
        </div>
     </div>
    </div> 
+</>
     
   )
 }
