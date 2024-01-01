@@ -4,7 +4,7 @@ import './Register.css'
 export default function Register() {
   return (
  <>
- <Topbar/>
+ {/* <Topbar/> */}
    <div className="login">
        <div className='loginWrapper'>
             <div className="loginLeft">
