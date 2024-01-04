@@ -61,7 +61,7 @@ export default function Post( {post}) {
                 <span className="postText">
                     {post?.desc}
                 </span>
-                <img src= {PF+post.img} alt="" className='postImg' />
+                <img src= {PF + "/post/" + post.img} alt="" className='postImg' />
                 
             </div>
             <div className="postBottom">

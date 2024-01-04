@@ -60,6 +60,26 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json(error)
     }
   })
+
+  // get friend 
+  router.get("/friends/:userId", async(req, res) => {
+    try {
+        const user = await User.findById(req.params.userId)
+        const friends = await Promise.all(
+            user.following.map(friendId => {
+                return User.findById(friendId)
+            })
+        )
+        let friendList = [];
+        friends.map(friend => {
+            const{_id, username, profilepicture} = friend;
+            friendList.push({_id, username, profilepicture })
+        })
+        res.status(200).json(friendList)
+    } catch (error) {
+        console.log(error)
+    }
+  })
   
  //follow a users
     router.put("/:id/follow", async(req, res) => {

@@ -16,8 +16,8 @@ profilepicture:
 coverpicture:
 "",
 
-following:
-Array (1),
+following: [1, 2, 3],
+Array: (1),
 isAdmin:
 false,
 
